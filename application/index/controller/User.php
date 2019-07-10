@@ -9,17 +9,16 @@ class User extends PublicController
     public function register(){
     	$request = Request::instance();
     	if (!empty($request->post())){
-    		$user = new UserModel;
+    		$user = new UserModel();
     		$user->username = trim($request->post('username'));
     		$user->password = md5($request->post('password'));
     		if ($user->where('username', $user->username)->find()){
     			$this->error('用户名已存在');
     		}
     		else {
-    			if ($user->save()){
+    			if ($user->allowField(true)->save()){
     				//session('user', $user);
     				$this->success('注册成功', 'login');
-    				//return $this->fetch('index/index');
     			}
     			else $this->error('注册失败');
     		}
@@ -32,10 +31,10 @@ class User extends PublicController
     	if (!empty($request->post())){
     		$username = trim($request->post('username'));
     		$password = md5($request->post('password'));
-    		$user = User::where('username', $username)->where('password', $password)->find();
+    		$user = UserModel::where('username', $username)->where('password', $password)->find();
     		if ($user){
     			session('user', $user);
-    			return $this->fetch('index/index');
+    			$this->redirect('index/index');
     		}
     		else $this->error('用户名不存在或密码不正确');
     	}
@@ -48,12 +47,13 @@ class User extends PublicController
     }
 
     public function modify(){
+        $this->chkLogin();
     	$request = Request::instance();
     	if (!empty($request->post())){
-    		$user = User::get(session('user.id'));
+    		$user = UserModel::get(session('user.id'));
     		$user->username = trim($request->post('username'));
     		$user->password = md5($request->post('password'));
-    		if ($user->save()){
+    		if ($user->allowField(true)->save()){
 	    		session('user', $user);
 	    		$this->success('个人信息修改成功');
 	    	}
