@@ -43,7 +43,7 @@ class User extends PublicController
 
     public function logout(){
     	session("user", null);
-    	return $this->fetch('index/index');
+    	return $this->redirect('index/index');
     }
 
     public function modify(){
