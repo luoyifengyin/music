@@ -1,4 +1,4 @@
-//jquery.validate表单验证
+﻿//jquery.validate表单验证
 $(document).ready(function(){
 	//登录表单验证
 	$("#loginForm").validate({
@@ -73,5 +73,5 @@ $(document).ready(function(){
 	jQuery.validator.addMethod("password", function(value, element) { 
 		var reg = /^[0-9a-zA-Z_]+$/;
 		return reg.test(value);
-	},  "密码中只能包含数字、字母和下划线"); 
+	},  "密码中只能包含数字、字母或下划线"); 
 });
