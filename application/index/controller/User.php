@@ -8,10 +8,9 @@ class User extends PublicController
 {
     public function register(){
     	$request = Request::instance();
-    	if (!empty($request->post())){
-    		$user = new UserModel();
-    		$user->username = trim($request->post('username'));
-    		$user->password = md5($request->post('password'));
+        $data = $request->post();
+    	if (!empty($data)){
+    		$user = new UserModel($data);
     		if ($user->where('username', $user->username)->find()){
     			$this->error('用户名已存在');
     		}
@@ -28,10 +27,10 @@ class User extends PublicController
 
     public function login(){
     	$request = Request::instance();
-    	if (!empty($request->post())){
-    		$username = trim($request->post('username'));
-    		$password = md5($request->post('password'));
-    		$user = UserModel::where('username', $username)->where('password', $password)->find();
+        $data = $request->post();
+    	if (!empty($data)){
+            $user = new UserModel($data);
+    		$user = UserModel::where('username', $user->username)->where('password', $user->password)->find();
     		if ($user){
     			session('user', $user);
     			$this->redirect('index/index');

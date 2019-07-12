@@ -5,27 +5,27 @@ $(document).ready(function(){
 		rules:{
 			username:{
 				required:true,//必填
-				minlength:6, //最少6个字符
-				maxlength:12,//最多12个字符
+				minlength:2, //最少1个字符
+				maxlength:20,//最多20个字符
 			},
 			password:{
 				required:true,
 				minlength:6, 
-				maxlength:12,
+				maxlength:16,
 			},
 		},
 		//错误信息提示
 		messages:{
 			username:{
 				required:"必须填写用户名",
-				minlength:"用户名至少为6个字符",
-				maxlength:"用户名至多为12个字符",
+				minlength:"用户名至少为2个字符",
+				maxlength:"用户名至多为20个字符",
 				remote: "用户名已存在",
 			},
 			password:{
 				required:"必须填写密码",
 				minlength:"密码至少为6个字符",
-				maxlength:"密码至多为12个字符",
+				maxlength:"密码至多为16个字符",
 			},
 		},
 
@@ -35,15 +35,13 @@ $(document).ready(function(){
 		rules:{
 			username:{
 				required:true,//必填
-				minlength:6, //最少6个字符
-				maxlength:12,//最多20个字符
-				remote:{
-				},
+				minlength:2, //最少1个字符
+				maxlength:20,//最多20个字符
 			},
 			password:{
 				required:true,
 				minlength:6, 
-				maxlength:12,
+				maxlength:16,
 			},
 			confirm_password:{
 				required:true,
@@ -55,14 +53,14 @@ $(document).ready(function(){
 		messages:{
 			username:{
 				required:"必须填写用户名",
-				minlength:"用户名至少为6个字符",
-				maxlength:"用户名至多为12个字符",
+				minlength:"用户名至少为2个字符",
+				maxlength:"用户名至多为20个字符",
 				remote: "用户名已存在",
 			},
 			password:{
 				required:"必须填写密码",
 				minlength:"密码至少为6个字符",
-				maxlength:"密码至多为12个字符",
+				maxlength:"密码至多为16个字符",
 			},
 			confirm_password:{
 				required: "请再次输入密码",
