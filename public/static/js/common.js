@@ -1,11 +1,11 @@
-//jquery.validate表单验证
+﻿//jquery.validate表单验证
 $(document).ready(function(){
 	//登录表单验证
 	$("#loginForm").validate({
 		rules:{
 			username:{
 				required:true,//必填
-				minlength:2, //最少1个字符
+				minlength:2, //最少2个字符
 				maxlength:20,//最多20个字符
 			},
 			password:{
@@ -67,4 +67,9 @@ $(document).ready(function(){
 			},
 		},
 	});
+	//自定义密码验证规则
+	jQuery.validator.addMethod("password", function(value, element) { 
+		var reg = /^[0-9a-zA-Z_]+$/;
+		return reg.test(value);
+	},  "密码中只能包含数字、字母或下划线"); 
 });
