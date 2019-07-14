@@ -8,6 +8,9 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
+use think\Route;
+
+Route::bind('index');
 
 return [
     '__pattern__' => [
@@ -17,5 +20,7 @@ return [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
-
+    '/' 	=> 'index',
+    'register'	  => 'user/register',
+    'login'		  => 'user/login',
 ];

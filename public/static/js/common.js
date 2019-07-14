@@ -20,7 +20,6 @@ $(document).ready(function(){
 				required:"必须填写用户名",
 				minlength:"用户名至少为2个字符",
 				maxlength:"用户名至多为20个字符",
-				remote: "用户名已存在",
 			},
 			password:{
 				required:"必须填写密码",
@@ -55,7 +54,6 @@ $(document).ready(function(){
 				required:"必须填写用户名",
 				minlength:"用户名至少为2个字符",
 				maxlength:"用户名至多为20个字符",
-				remote: "用户名已存在",
 			},
 			password:{
 				required:"必须填写密码",

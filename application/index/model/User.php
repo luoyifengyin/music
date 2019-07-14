@@ -5,14 +5,18 @@ use think\Model;
 
 class User extends Model
 {
-	protected $auto = ['username', 'password'];
+	protected $auto = ['ip'];
 
-	protected function setUsernameAttr($value){
+	public function setUsernameAttr($value){
 		return trim($value);
 	}
 
-	protected function setPasswordAttr($value){
+	public function setPasswordAttr($value){
 		return md5($value);
+	}
+
+	protected function setIpAttr(){
+		return request()->ip();
 	}
 
 	protected $autoWriteTimestamp = 'datetime';
