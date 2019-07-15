@@ -1,0 +1,172 @@
+html, body, ul, li, dd, dl, h1, span{
+	margin: 0;
+	padding: 0;
+}
+a, img{
+	border: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+.main{
+	border: 0px solid red;
+	max-width: 1200px;
+	min-width: 940px;
+	margin: 0px auto;
+	margin-top: 90px;
+}
+.leftlist{
+	border: 1px solid blue;
+	width: 180px;
+	float: left;
+}
+.leftlist_list{
+	line-height: 60px;
+	margin-bottom: 20px; 
+}
+.leftlist_tit{
+	line-height: 60px;
+    font-size: 22px;
+    font-weight: 400;
+    border-bottom: 1px solid #ebebeb;
+    margin: 0 17px 10px;
+}
+.selected{
+	background-color: #c755ff;
+	color: #fff;
+}
+.leftlist_link{
+	font-size: 17px;
+	padding: 1px 17px;
+	display: block;
+}
+.modmusic{
+	border: 1px solid #000;
+	position: relative;
+ 	margin-left: 210px;
+}
+.modmusic_hd{
+	height: 60px;
+	line-height: 60px;
+}
+.modmusic_tit{
+	font-weight: normal;
+	padding-left: 10px;
+	font-size: 28px;
+	float: left;
+}
+.modmusic_tools{
+	margin-top: 20px;
+	padding-left: 10px;
+	margin-bottom: 20px; 
+}
+.mod_btn{
+	min-width: 122px;
+    text-align: center;
+    height: 36px;
+    margin-right: 10px; 
+}
+.mod_btn:nth-child(1){
+	background-color: #c755ff;
+	color: white;
+}
+.mod_btn:nth-child(1):hover{
+	background-color: #a338d8;
+	 cursor:pointer;
+}
+.mod_btn:nth-child(n+2):hover{
+	background-color: #ededed;
+	 cursor:pointer;
+}
+.modmusic_tools button{
+	border: 1px solid #c9c9c9;
+	background: white;
+    color: #000;
+}
+.modmusic_tb{
+	height: 46px;
+    line-height: 46px;
+    background: #fafafa;
+    color: #000;
+}
+.music_hd{
+	align-items: center;
+	display: flex;
+}
+.music_hd_num{
+	width: 15%;
+	min-width: 80px;
+    padding-left: 5%;
+	flex-shrink: 0;
+}
+.music_hd_name{
+	flex: 1;
+}
+.music_hd_singer{
+	width: 20%;	
+}
+.music_hd_time{
+	width: 7%;
+}
+
+.music_item{
+	display: flex;
+	border: 1px solid #FF7000;
+	height: 70px;
+	line-height: 70px;
+}
+.music_item:nth-child(2n){
+	background: #fafafa;
+}
+.music_item_num{
+    position: relative;
+    padding-left: 4.6%;
+    width: 5%;
+    height: 70px;
+    min-width: 50px;
+    padding-right: 30px;
+}
+.music_item_num .no1{
+	background: url(../images/no1.png) center 19px no-repeat;
+	width: 35px;
+    height: 70px;
+	background-size: 31px 31px;
+}
+.music_item_num .no2{
+	background: url(../images/no2.png) center 19px no-repeat;
+	width: 35px;
+    height: 70px;
+	background-size: 31px 31px;
+}
+.music_item_num .no3{
+	background: url(../images/no3.png) center 19px no-repeat;
+	width: 35px;
+    height: 70px;
+	background-size: 31px 31px;
+}
+.music_infor{
+	flex: 1;
+	display: flex;
+}
+.music_infor_img{
+	padding-right: 20px;
+	padding-top: 8px;
+	height: 55px;
+	width: 55px;
+}
+.music_infor_name{
+	
+}
+.music_infor_singer{
+	border: 1px solid red;
+	width: 17%;
+}
+.music_infor_time{
+	border: 1px solid red;
+	width: 8%;
+	padding-left: 2%;
+}
