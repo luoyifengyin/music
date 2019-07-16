@@ -44,6 +44,9 @@ li{
 	padding: 1px 17px;
 	display: block;
 }
+.leftlist_link:not(.selected){
+	cursor: pointer;
+}
 .modmusic{
 	border: 1px solid #000;
 	position: relative;
