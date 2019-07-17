@@ -6,11 +6,11 @@ $(function(){
 		var preSelected = $('.leftlist_link.selected');
 		$.ajax({
 			type: "GET",
-			url: "http://mymusic.com/ajax/rank",
+			url: "http://127.0.0.1/ajax/rank",
 			data: "rank=" + rank,
 			success: function(res){
-				var status = {'preSel':preSelected.data('rank')};
-				history.pushState(status,'','?rank='+rank);
+				// var status = {'preSel':preSelected.data('rank')};
+				// history.pushState(status,'','?rank='+rank);
 				preSelected.removeClass('selected');
 				target.addClass('selected');
 				$('.modmusic_tit').text(target.text());
@@ -24,11 +24,20 @@ $(function(){
 		// 	alert(res);
 		// })
 	});
-	window.onpopstate = function(){
-		var state = history.state;
-		if (state){
-			$('.leftlist_link.selected').removeClass('selected');
-			$('.leftlist_link[data-rank='+state.preSel+']').addClass('selected');
-		}
-	}
+	
+	// window.onpopstate = function(){
+	// 	var state = history.state;
+	// 	if (state){
+	// 		$('.leftlist_link.selected').removeClass('selected');
+	// 		$('.leftlist_link[data-rank='+state.preSel+']').addClass('selected');
+	// 	}
+	// }
+	// 
+	// window.addEventListener('popstate', function(){
+	// 	var state = history.state;
+	// 	if (state){
+	// 		$('.leftlist_link.selected').removeClass('selected');
+	// 		$('.leftlist_link[data-rank='+state.preSel+']').addClass('selected');
+	// 	}
+	// }, true)
 })

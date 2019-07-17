@@ -5,19 +5,12 @@ html,body{
 	padding:0px;
 	background:#FFF;
 }
-.bd{
-	margin:140px auto;
-	width:600px;
-	height:600px;
-	border:1px solid #F00;
+a:hover{
+	text-decoration: none;
 }
-.header{
-	padding: 0 auto;
-	margin: 0 auto;
-	text-align: center;
-}
+
 .search{
-	width:160px;
+	width:200px;
 	height: 32px;
 	background-color:#fff;
 	margin-left: 18px;
@@ -27,22 +20,19 @@ html,body{
 	margin-right:auto;
 }
 .search input{
-	width:120px;
+	width:150px;
 	height:18px;
 	float: right;
 	margin-top: 6px;
-	border-radius: 15px;
-	padding: 0;
+	margin-right: 5px;
+	outline: none;
+	font-size: 15px;
 	border: 0;
 	
 }
 .search i{
-	width:32px;
-	height:32px;
 	margin-top: 9px;
-	margin-left:5px;
+	margin-left:15px;
 	border-radius: 15px;
-	padding: 0;
-	border: 0;
 	
 }

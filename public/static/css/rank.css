@@ -15,9 +15,10 @@ li{
 .main{
 	border: 0px solid red;
 	max-width: 1200px;
-	min-width: 940px;
+	min-width: 1000px;
 	margin: 0px auto;
 	margin-top: 90px;
+	padding: 0 50px;
 }
 .leftlist{
 	border: 1px solid blue;
@@ -44,7 +45,10 @@ li{
 	padding: 1px 17px;
 	display: block;
 }
-.leftlist_link:not(.selected){
+.leftlist_link:not(.selected):hover{
+	color: #c755ff;
+}
+.leftlist_link{
 	cursor: pointer;
 }
 .modmusic{
