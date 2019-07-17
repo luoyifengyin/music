@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+html,body{
+	margin:0px;
+	padding:0px;
+	background:#F5F5F5;
+}
+.song-left{
+	float:left;
+}
+
+.image{
+	width:150px;
+	height:150px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:32px;
+}
+.setting-out{
+	background:#FFF;
+	border-left:1px solid #C0C0C0;
+	border-right:1px solid #C0C0C0;
+}
+/* .col-md-2{
+	bottom:auto;
+	border-left:1px solid #000;
+}
+.col-md-6{
+	border-right:1px solid #000;
+} */
+.fa-tag-nature{
+	transform: rotate(135deg);
+	color:#F00;
+	margin-top:5px;
+	float:left;
+	margin-right:16px;
+}
+.h1-nature{
+	margin-top:32px;
+	margin-left:16px;
+	margin-right:16px;
+}
+.h4-nature{
+	margin-top:8px;
+	margin-left:55px;
+	margin-right:0px;
+}
+.my-comment{
+	height:140px;
+	border-top:3px solid #F00;
+}
+.comment-image{
+	width:50px;
+	height:50px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:16px;
+	float:left;
+}
+.form-control-width{
+	width:93% !important;
+}
+.btn-default-right{
+	float:right;
+}
+.user-comment{
+	height:80px;
+	border-top:1px solid #C0C0C0;
+}
+.cnt{
+	margin-left:auto;
+	margin-right:12px;
+	margin-top:16px;
+
+	
+}
+.reply{
+	float:right;
+}
+.page-turning{
+	text-align:center;
+
+}
+.black_overlay{ 
+	display: none; 
+	position: absolute; 
+	top: 0%; 
+	left: 0%; 
+	width: 100%; 
+	height: 100%; 
+	background-color: black; 
+	z-index:1001; 
+	-moz-opacity: 0.8; 
+	opacity:.80; 
+	filter: alpha(opacity=88); 
+} 
+.white_content { 
+	display: none; 
+	position: absolute; 
+	top: 25%; 
+	left: 25%; 
+	width: 55%; 
+	height: 190px; 
+	padding: 20px; 
+	border: 1px solid orange; 
+	background-color: white; 
+	z-index:1002; 
+	overflow: auto; 
+} 
+/* .bd{
+	margin:140px auto;
+	width:600px;
+	height:600px;
+	border:1px solid #F00;
+}
+.header{
+	padding: 0 auto;
+	margin: 0 auto;
+	text-align: center;
+}
+.search{
+	width:160px;
+	height: 32px;
+	background-color:#fff;
+	margin-left: 18px;
+	margin-top: 3px;
+	border-radius: 15px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.search input{
+	width:120px;
+	height:18px;
+	float: right;
+	margin-top: 6px;
+	border-radius: 15px;
+	padding: 0;
+	border: 0;
+	
+}
+.search i{
+	width:32px;
+	height:32px;
+	margin-top: 9px;
+	margin-left:5px;
+	border-radius: 15px;
+	padding: 0;
+	border: 0;
+	
+} */
