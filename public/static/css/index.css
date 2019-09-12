@@ -1,0 +1,131 @@
+/**{margin:0px;padding:0px;}*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    min-width: 100%;
+    height: 414px;
+    background-color: black;
+}
+
+#photos {
+    margin: 0 auto;
+    position: relative;
+    width: 900px;
+    height: 414px;
+    padding: 0;
+}
+
+.pictures {
+    position: absolute;
+    width: 900px;
+    height: 414px;
+    list-style: none;
+}
+
+.arrow {
+    font-size: 2.5em;
+    background-color: rgb(144, 144, 144, 0.1);
+    color: white;
+    width: 20px;
+    cursor: pointer;
+}
+
+#buttons {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 47%;
+    z-index: 4;
+}
+
+.button {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: grey;
+    float: left;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #DFDFDF;
+}
+
+.bg .top {
+    width: 900px;
+    padding-bottom: 200px;
+    background: #DFDFDF;
+}
+
+.bg .top .a {
+    width: 900px;
+    height: 40px;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: auto;
+    border-bottom: 1px solid red;
+    text-align: center;
+}
+
+.bg .top .b {
+    width: 900px;
+    background: white;
+}
+
+.bg .top .c {
+    width: 900px;
+    height: 300px;
+    background: white;
+}
+
+.bg .top .c .d {
+    width: 900px;
+    height: 40px;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: auto;
+    border-bottom: 1px solid red;
+    text-align: center;
+}
+
+.bg .top ul li {
+    width: 50px;
+    height: 30px;
+    float: left;
+    color: black;
+    list-style: none;
+    line-height: 30px;
+    text-olign: center;
+    ont-size: 50px;
+    font-family: 微软雅黑;
+}
+
+.bg .top ul li a {
+    text-decoration: none;
+}
+
+.bg .top .b .e {
+    white: 150px;
+    height: 150px;
+    background: red;
+}
+
+.thumbnail {
+    width: 150px;
+    /*height:150px;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.typeface {
+    display: block;
+    margin-top: 10px;
+    color: black;
+}

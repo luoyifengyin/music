@@ -1,0 +1,93 @@
+
+<head>
+    <title>{$Think.session.user.username} - 上传音乐 - {$Think.const.APP_NAME}</title>
+    <link type="text/css" rel="stylesheet" href="__CSS__/upload.css"/>
+</head>
+<body>
+    <div class="bd">
+        <div class="upload">
+            <div class="wrap">
+                <div class="left">
+                    <div class="title">上传音乐</div>
+                        <form id="uploadForm" enctype="multipart/form-data" method="post">
+                            <div class="content">
+                                <div class="loadcontent">
+                                    <label class="label1">歌名：</label>
+                                    <input name="name" type="text" class="input1" id="name" maxlength="32"/>
+                                </div>
+                                <div class="loadcontent">
+                                    <label class="label1">歌手：</label>
+                                    <input name="singer" type="text" class="input1" id="singer" maxlength="20"/>
+                                </div>
+                                <div class="loadcontent">
+                                    <label class="label1">歌词：</label>
+                                    <div class="lyric">
+                                        <textarea name="lyric" class="txt" id="lyric" maxlength="500"></textarea>
+                                        <span class="lyric_number" id="remain">500</span>
+                                    </div>
+                                </div>
+                                <div class="loadcontent">
+                                    <label class="label1">分类：</label>
+                                    <select name="area" class="select1" id="area">
+                                        <option value="1">华语</option>
+                                        <option value="2">粤语</option>
+                                        <option value="3">欧美</option>
+                                        <option value="4">日语</option>
+                                        <option value="5">韩语</option>
+                                    </select>
+                                </div> 
+                                <div class="loadcontent"> 
+                                    <label class="label1">歌曲：</label>
+                                    <div class="input2">
+                                        <input type="file" name="music" id="file">
+                                    </div>
+                                    <div class="savebtn">
+                                        <button type="submit" id="uploadSubmit">确认上传</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <br />
+                        <br />
+                        <label class="label2">歌曲封面</label>
+                        <div class="right_img">
+                            <img src="__IMG__/albumPicture.jpg" id="temp" style="width:200px;height:200px;margin-left:10px;" >
+                            <div class="input3">
+                                选择文件
+                                <input type="file" name="cover" width="200px" onchange="choiceImg(this)" accept="image/jpg,image/jpeg,image/png,image/gif" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {include file="common@public/footer"}
+    <script>
+        function fileSelected(file, type) {
+            var name = file.name;
+            // console.log(name);
+
+            var path;
+            if(type == "img") {
+                if(document.all) // IE
+                {
+                    // ele.select();
+                    path = document.selection.createRange().text;
+                    document.getElementById("temp").innerHTML = "";
+                } else // FF
+                {
+                    path = URL.createObjectURL(file);
+                    document.getElementById("temp").src = path;
+                }
+            }
+        }
+        function choiceImg(e) {
+            fileSelected(e.files[0], "img");
+        }
+    </script>
+</body>
+</html>

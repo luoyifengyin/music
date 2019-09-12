@@ -31,7 +31,7 @@ return [
     // 默认输出类型
     'default_return_type'    => 'html',
     // 默认AJAX 数据返回格式,可选json xml ...
-    'default_ajax_return'    => 'json',
+    'default_ajax_return'    => 'html',
     // 默认JSONP格式返回的处理方法
     'default_jsonp_handler'  => 'jsonpReturn',
     // 默认JSONP处理方法
@@ -140,11 +140,16 @@ return [
         'taglib_begin' => '{',
         // 标签库标签结束标记
         'taglib_end'   => '}',
+
+        'layout_on'    => true,
+
+        'layout_name'  => 'layout',
     ],
 
     // 视图输出字符串内容替换
     'view_replace_str'       => [
-        '__IMG__'      => '/static/images'
+        '__IMG__'      => '/static/images',
+        '__AVATAR__'   => '/user/profile_picture',
     ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',

@@ -1,0 +1,26 @@
+{volist name="rank_list" id="item"}
+	<li class="music_item">
+		<div class="music_item_num">
+			{elt name="i" value="3"}
+				<div class="no{$i}"></div>
+			{else/}
+				<span class="nonum">{$i}</span>
+			{/elt}
+		</div>
+		<div class="music_infor">
+			{php}$song_path = url("index/song/".$item->id);{/php}
+			<a data-pjax href="{$song_path}"><img class="music_infor_img" src="{empty name='item.cover'}__IMG__/cover1.jpg{else/}/song/cover/{$item.cover}{/empty}"></a>
+			<a data-pjax href="{$song_path}"><div class="music_infor_name" title="{$item.name}">{$item.name}</div></a>
+		</div>
+		<div class="music_tools" style="display: none;">
+			<ul>
+				<li data-play="{$item.id}"><i class="iconfont icon-play5" style="font-size: 38px;"></i></li>
+				<li data-add="{$item.id}"><i class="iconfont icon-add1" style="font-size: 38px;"></i></li>
+				<li data-collect="{$item.id}"><i class="iconfont icon-fscollection" style="font-size: 38px;"></i></li>
+				<li data-download="{$item.id}"><i class="iconfont icon-Downarrow" style="font-size: 38px;"></i></li>
+			</ul>
+		</div>
+		<div class="music_infor_singer" title="{$item.singer}">{$item.singer}</div>
+		<div class="music_infor_time">{$item.duration}</div>
+	</li>
+{/volist}

@@ -1,12 +1,17 @@
 @charset "utf-8";
 
-html,body{
-	margin:0px;
-	padding:0px;
-	background:#FFF;
-}
-a:hover{
+.navbar a:visited{
 	text-decoration: none;
+}
+.navbar a:hover{
+	text-decoration: none;
+}
+.navbar a:focus{
+	text-decoration: none;
+}
+
+#app-title{
+	color: #fff !important;
 }
 
 .search{
@@ -19,11 +24,11 @@ a:hover{
 	margin-left:auto;
 	margin-right:auto;
 }
-.search input{
+.navbar .search input{
 	width:150px;
-	height:18px;
+	height:22px;
 	float: right;
-	margin-top: 6px;
+	margin-top: 5px;
 	margin-right: 5px;
 	outline: none;
 	font-size: 15px;
@@ -35,4 +40,13 @@ a:hover{
 	margin-left:15px;
 	border-radius: 15px;
 	
+}
+.headimg{
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+    border-radius: 32px;
+    background-image: url(/static/images/profile_picture_def.jpg);
+    background-size: 32px 32px;
+    float: left;
 }

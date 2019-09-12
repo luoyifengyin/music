@@ -1,15 +1,131 @@
-<!DOCTYPE html>
-<html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Language" content="zh-cn" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="__CSS__/index.css">
+    <link type="text/css" rel="stylesheet" href="__CSS__/index.css" />
+    <title>{$Think.const.APP_NAME}</title>
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
+
 <body>
-	{include file="public/header"}
-	<iframe src="{:url('index/rank')}" width="100%" height="100%" frameborder="0"></iframe>
+    <div id='container'>
+        <div class="left_arrows">
+            <!-- <span class='arrow' title='left' style="float:left;margin:170px 0px 0px 470px;"> <
+                </span> </div> -->
+            <ul id='photos'>
+                <li class='pictures' id='#000000' style='z-index: 2;'><a href="#"></a><img src='__IMG__/1.jpg' width="900px" height="414px"></li>
+                <li class='pictures' id='#102329'><img src='__IMG__/2.jpg' width="900px" height="414px"></li>
+                <li class='pictures' id='#010006'><img src='__IMG__/3.jpg' width="900px" height="414px"></li>
+                <li class='pictures' id='#111A29'><img src='__IMG__/4.jpg' width="900px" height="414px"></li>
+                <li class='pictures' id='#38373D'><img src='__IMG__/5.jpg' width="900px" height="414px"></li>
+                <li class='pictures' id='#F3EDED'><img src='__IMG__/6.jpg' width="900px" height="414px"></li>
+                <li class='pictures' id='#188987'><img src='__IMG__/7.jpg' width="900px" height="414px"></li>
+                <!-- <div id='arrows'>
+                            <span class='arrow' title='left' style="float:left;margin-top:170px;"><</span>
+                            <span class='arrow' title='right' style="float:right;margin-top:170px;">></span>
+                        </div> -->
+            </ul>
+            <!-- <div class="">
+                <span class='arrow' title='right' style="float:right;margin:170px 470px 0px 0px;">></span>
+            </div> -->
+        </div>
+        <div id='buttons'>
+            <span class='button' style='background-color: red;'></span>
+            <span class='button'></span>
+            <span class='button'></span>
+            <span class='button'></span>
+            <span class='button'></span>
+            <span class='button'></span>
+            <span class='button'></span>
+        </div>
+        <div>
+            <div class="bg" style="margin:0px auto">
+                <div class="bootstrap-iso">
+                    <div class="top" style="margin:auto">
+                        <!-- <ul class="nav nav-tabs" >  -->
+                        <!-- <li class="active">  -->
+                        <!-- <a href="#">推荐</a>  -->
+                        <!-- </li> -->
+                        <!-- <li><a href="#">华语</a></li>  -->
+                        <!-- <li><a href="#">摇滚</a></li>  -->
+                        <!-- </ul> -->
+                        <div class="a" style="margin:auto;">
+                            <img src="__IMG__/1.PNG" style="float:left; margin-top:1px;">
+                            <img src="__IMG__/2.PNG" style="float:right; margin-top:3px; ">
+                            <ul style="float: left;">
+                                <li><p>推荐</p></li>
+                                <!-- <li><a href="https://music.163.com/#/discover/playlist/?cat=%E5%8D%8E%E8%AF%AD">华语</li> 
+                                                        <li><a href="https://music.163.com/#/discover/playlist/?cat=%E6%B5%81%E8%A1%8C">流行</li> 
+                                                        <li><a href="https://music.163.com/#/discover/playlist/?cat=%E6%B0%91%E8%B0%A3">民谣</li> 
+                                                        <li><a href="https://music.163.com/#/discover/playlist/?cat=%E6%91%87%E6%BB%9A">摇滚</li>
+                                                        <li><a href="https://music.163.com/#/discover/playlist/?cat=%E7%94%B5%E5%AD%90">电子</li>  -->
+                            </ul>
+                        </div>
+                        <div class="b container-fluid">
+                            <!-- <div class="e" style="float:left;"> -->
+                            <!-- <img src="__IMG__/1.PNG" style="float:left;"> -->
+                            <!-- </div> -->
+                            <div class="row">
+                                <div class="col-xs-6 col-md-3">
+                                    <a data-pjax href="{:url('index/song/5')}" class="thumbnail">
+                                        <img src="/song/cover/cover5.jpg" alt="图片加载失败" style="width: 140px;height: 140px;">
+                                        <div class="typeface">You Are - GOT7</div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a data-pjax href="{:url('index/song/15')}" class="thumbnail">
+                                        <img src="/song/cover/cover15.jpg" alt="图片加载失败" style="width: 140px;height: 140px;">
+                                        <div class="typeface">Shape of You - Ed Sheeran</div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a data-pjax href="{:url('index/song/39')}" class="thumbnail">
+                                        <img src="/song/cover/cover39.jpg" alt="图片加载失败" style="width: 140px;height: 140px;">
+                                        <div class="typeface">덜덜덜 (抖抖抖) - EXID</div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a data-pjax href="{:url('index/song/38')}" class="thumbnail">
+                                        <img src="/song/cover/cover38.jpg" alt="图片加载失败" style="width: 140px;height: 140px;">
+                                        <div class="typeface">此生不换 - 青鸟飞鱼</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-3">
+                                    <a data-pjax href="{:url('index/song/37')}" class="thumbnail">
+                                        <img src="/song/cover/cover37.jpg" alt="图片加载失败" style="width: 140px;height: 140px;">
+                                        <div class="typeface">平凡之路 - 朴树</div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a data-pjax href="{:url('index/song/27')}" class="thumbnail">
+                                        <img src="/song/cover/cover27.jpg" alt="图片加载失败" style="width: 140px;height: 140px;">
+                                        <div class="typeface">你瞒我瞒 - 陈柏宇</div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a data-pjax href="{:url('index/song/24')}" class="thumbnail">
+                                        <img src="/song/cover/cover24.jpg" alt="图片加载失败">
+                                        <div class="typeface">广东爱情故事 - 广东雨神</div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a data-pjax href="{:url('index/song/19')}" class="thumbnail">
+                                        <img src="/song/cover/cover19.jpg" alt="图片加载失败" style="width: 140px;height: 140px;">
+                                        <div class="typeface">Love Yourself - Justin Bieber</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                {include file="common@public/footer"}
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script> -->
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script> -->
+    <!-- <script src="__JS__/index.js"></script> -->
 </body>
-</html>

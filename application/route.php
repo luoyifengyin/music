@@ -23,4 +23,5 @@ return [
     '/' 	=> 'index',
     'register'	  => 'user/register',
     'login'		  => 'user/login',
+    'song/:id'    => 'index/song',
 ];

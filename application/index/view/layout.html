@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="zh-cn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{$Think.const.APP_NAME}</title>
+    <link rel="stylesheet" type="text/css" href="__CSS__/layout.css">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/bootstrap/css/bootstrap-iso.css">
+    <script type="text/javascript" src="__JS__/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="__JS__/player.js"></script> -->
+</head>
+
+<body>
+    {include file="common@public/header"}
+    <div id="pjax-container" class="wrap-container">
+        {__CONTENT__}
+    </div>
+    {include file="common@public/player"}
+    <!-- <iframe id="pjax-wrap" name="main-content" src="/fragment/{//$page}" frameborder="0"></iframe> -->
+    <!-- <div id="pjax-container"></div> -->
+    <!-- <a data-pjax href="{:url('index/rank')}">pjax-click</a> -->
+    <script type="text/javascript" src="__JS__/jquery.min.js"></script>
+    <script src="__STATIC__/bootstrap/js/bootstrap.min.js"></script>
+    <script src="__JS__/jquery.pjax.js"></script>
+    <!-- <script type="text/javascript" src="__JS__/pjax.js"></script> -->
+    <script type="text/javascript" src="__JS__/layout.js"></script>
+    <script src="__JS__/index.js"></script>
+    <script type="text/javascript" src="__JS__/heart.js"></script>
+</body>
+
+</html>

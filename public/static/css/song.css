@@ -30,7 +30,7 @@ html,body{
 } */
 .fa-tag-nature{
 	transform: rotate(135deg);
-	color:#F00;
+	color:#c755ff;
 	margin-top:5px;
 	float:left;
 	margin-right:16px;
@@ -45,16 +45,14 @@ html,body{
 	margin-left:55px;
 	margin-right:0px;
 }
+/*#comment{}*/
 .my-comment{
-	height:140px;
-	border-top:3px solid #F00;
+	border-top:3px solid #c755ff;
 }
 .comment-image{
 	width:50px;
 	height:50px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:16px;
+	margin: 16px 16px 10px auto;
 	float:left;
 }
 .form-control-width{

@@ -1,0 +1,130 @@
+
+<head>
+	<title>{$Think.session.user.username} - 修改个人信息 - {$Think.const.APP_NAME}</title>
+	<link type="text/css" rel="stylesheet" href="__CSS__/modify.css"/>
+</head>
+<body>
+	<div class="bd">
+		<div class="modify">
+			<div class="wrap">
+				<div class="title">修改个人信息</div>
+				<form data-ajax-res id="uploadForm" enctype="multipart/form-data" method="post">
+					<div class="content">
+						<div class="left">
+							<div class="left_content">
+								<label class="label1" for="username">昵称：</label>
+								<input type="text" name="username" class="input1" id="username" value="{$Think.session.user.username}" maxlength="20"/>
+							</div>
+							<!-- <div class="left_content">
+								<label class="label1" for="password">密码：</label>
+								<input type="password" name="password" class="input1" id="password" maxlength="16"/>
+							</div> -->
+							<div class="left_content">
+								<label class="label1" for="signature">介绍：</label>
+								<div class="introduce">
+									<textarea name="description" class="txt" id="signature" maxlength="255">{$Think.session.user.description}</textarea>
+									<span class="introduce_number" id="remain">255</span>
+								</div>
+							</div>
+							<div class="left_content">
+								<label class="label1">性别：</label>
+								<div class="sex">
+									{assign name="gender" value="$Think.session.user.sex"}
+									<label class="check"><input name="sex" type="radio" value="0" 
+										{eq name="gender" value="0"}checked{/eq}>男</label>
+									<label class="check"><input name="sex" type="radio" value="1"
+										{eq name="gender" value="1"}checked{/eq}>女</label>
+									<label class="check"><input name="sex" type="radio" value="2"
+										{eq name="gender" value="2"}checked{/eq}>保密</label>
+								</div>
+							</div>
+							<div class="left_content">
+								<label class="label1">生日：</label>
+								<div class="birth"><input type="date" name="birthday" value="{$Think.session.user.birthday}" /></div>
+							</div>
+							<div class="savebtn">
+								<button type="submit" id="uploadSubmit">保 存</button>
+							</div>
+						</div>
+						<div class="right">
+				            <label class="label1 label2">更改头像</label>
+				            <div class="right_img">
+				            	<img src="{empty name='$Think.session.user.profile_picture'}__IMG__/profile_picture_def.jpg{else/}__AVATAR__/{$Think.session.user.profile_picture}{/empty}" id="temp" />
+			                </div>
+			            	<div class="input2">
+			            		选择文件
+			            		<input type="file" name="profilePicture" width="200px" onchange="choiceImg(this)" accept="image/jpg,image/jpeg,image/png,image/gif" />
+							</div>
+		                    <!-- <div class="fileinput fileinput-new" data-provides="fileinput" id="exampleInputUpload">
+		                        <div class="fileinput-new thumbnail" style="width:200px;height:200px;">
+		                            <img id="picImg" style="width:200px;height:200px;" src="images/1.jpg" />
+		                        </div>
+		                        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width:200px;max-height:200px;"></div>
+		                        <div>
+		                            <span class="btn btn-primary btn-file">
+		                                <span class="fileinput-new">选择图片</span>
+		                                <span class="fileinput-exists">换一张</span>
+		                                <input type="file" name="pic1" id="picID" accept="image/gif,image/jpeg,image/x-png"/>
+		                            </span>
+		                            <a href="#" class="btn btn-warning fileinput-exists" data-dismiss="fileinput">移除</a>
+		                    	</div>
+		                	</div> -->
+					    </div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	{include file="common@public/footer"}
+	<script>
+        function fileSelected(file, type) {
+            var name = file.name;
+            // console.log(name);
+
+            var path;
+            if(type == "img") {
+                if(document.all) // IE
+                {
+                    // ele.select();
+                    path = document.selection.createRange().text;
+                    document.getElementById("temp").innerHTML = "";
+                } else // FF
+                {
+                    path = URL.createObjectURL(file);
+                    document.getElementById("temp").src = path;
+                }
+            }
+        }
+        function choiceImg(e) {
+            fileSelected(e.files[0], "img");
+        }
+    </script>
+
+	<!-- <script type="text/javascript">
+            $(function () {
+                $('#uploadSubmit').click(function () {
+                    var data = new FormData($('#uploadForm')[0]);
+                    $.ajax({
+                        url: 'xxx/xxx',
+                        type: 'POST',
+                        data: data,
+                        async: false,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        // success: function (data) {
+                        //     console.log(data);
+                        //     if(data.status){
+                        //         console.log('upload success');
+                        //     }else{
+                        //         console.log(data.message);
+                        //     }
+                        // },
+                        // error: function (data) {
+                        //     console.log(data.status);
+                        // }
+                    });
+                });
+            })
+      </script> -->
+</body>

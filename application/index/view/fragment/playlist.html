@@ -1,0 +1,8 @@
+{volist name="playlist" id="item"}
+<li data-play="{$item.id}">
+    <div class="songlist_songname"><span>{$item.name}</span></div>
+    <div class="songlist_singername"><span>{$item.name}</span></div>
+    <div class="song_delete"><i class="fa fa-trash-o"></i></div>
+    <div class="songlist_songtime"><span class="span_right">{$item.duration}</span></div>
+</li>
+{/volist}

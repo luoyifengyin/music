@@ -1,13 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="__CSS__/style.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/search.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="__JS__/tools_s.js"></script>
+    <title>{$Think.const.APP_NAME}</title>
 </head>
+
 <body>
-	{volist name="list" id="item"}
-		<div class="">{$key}:{$item.value}</div>
-	{/volist}
+    <div class="wrap">
+        <!-- 搜索栏 -->
+        <div class="search-area" style="background-image: url(__IMG__/search_bg.jpg)">
+            <form data-pjax action="search" method="get" class="search-form">
+                <div class="search-input">
+                    <input class="search-input-bar" type="text" name="keyword" placeholder="请输入音乐/歌手/专辑" value="{present name='keyword'}{$keyword}{/present}">
+                    <button class="search-input-btn" type="submit">
+                        <i class="fa fa-search fa-lg"></i>
+                        <span class="icon-txt">搜索</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- 搜索列表 -->
+        <div class="search-result">
+            <div class="list-tools">
+                <button class="tools-btn"><i class="iconfont icon-play"></i>&nbsp;播放</button>
+                <button class="tools-btn"><i class="iconfont icon-add"></i>&nbsp;收藏</button>
+                <button class="tools-btn"><i class="iconfont icon-heart"></i>&nbsp;分享</button>
+                <button class="tools-btn"><i class="iconfont icon-custom-comment"></i>&nbsp;评论</button>
+            </div>
+            <div class="list-tb">
+                <ul class="list-hd">
+                    <li class="music-hd-name">歌曲</li>
+                    <li class="music-hd-singer">歌手</li>
+                    <li class="music-hd-album">分类</li>
+                    <li class="music-hd-time">时长</li>
+                </ul>
+                <ul class="search-list">
+                    {include file="fragment/search_list"}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {include file="common@public/footer"}
 </body>
-</html>

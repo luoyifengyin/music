@@ -1,13 +1,13 @@
 $(function(){
-	$('.leftlist_link').click(function(ev){
+	$('#pjax-container').delegate('.leftlist_link','click', function(){
 		if ($(this).hasClass('selected')) return;
 		var target = $(this);
 		var rank = target.data('rank');
 		var preSelected = $('.leftlist_link.selected');
 		$.ajax({
 			type: "GET",
-			url: "http://127.0.0.1/ajax/rank",
-			data: "rank=" + rank,
+			url: URL_DOMAIN + "ajax/rank",
+			data: {rank: rank},
 			success: function(res){
 				// var status = {'preSel':preSelected.data('rank')};
 				// history.pushState(status,'','?rank='+rank);

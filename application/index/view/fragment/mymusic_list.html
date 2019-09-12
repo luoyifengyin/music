@@ -1,0 +1,24 @@
+{volist name="music_list" id="item"}
+<tr data-song>
+    <td style="text-align: center;">{$i}</td>
+    <td><a data-play="{$item.id}" class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-play-circle" aria-hidden="true" title="播放"></span>
+        </a></td>
+        {php}$song_path = url("index/song/".$item->id);{/php}
+    <td><a data-pjax href="{$song_path}">{$item.name}</a></td>
+    <td><a data-add="{$item.id}" class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true" title="添加到播放列表"></span>
+        </a>
+        <!-- <a class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-share" aria-hidden="true" title="分享"></span>
+        </a> -->
+        <a data-download="{$item.id}" class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true" title="下载"></span>
+        </a>
+        <a data-delete="{$item.id}" class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true" title="删除"></span>
+        </a>
+    </td>
+    <td>{$item.singer}</td>
+</tr>
+{/volist}

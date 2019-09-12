@@ -3,8 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__CSS__/debug.scss">
 </head>
 <body>
-	{include file="debug/test_list"}
+	<script src="__JS__/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.js"></script>
+	<script type="text/javascript">
+		$(document).pjax('a[data-pjax]', '#pjax-container')
+	</script>
+	<div id="pjax-container">hello, world</div>
+	<a data-pjax href="pjax_content">data-pjax</a>
+	<div class="test"></div>
 </body>
 </html>

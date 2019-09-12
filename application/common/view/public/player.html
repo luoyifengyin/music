@@ -1,0 +1,91 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="__CSS__/player.css">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="__JS__/jquery.min.js"></script>
+    <!-- <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script> -->
+    <script src="__JS__/ProgressBarWars.js"></script>
+    <script src="__JS__/player.js"></script>
+</head>
+
+<body>
+    <div class="play" id="play">
+        <div class="container">
+            <!--存放切歌按钮的容器-->
+            <div class="play_switch">
+                <!--上一首-->
+                <span id="pre" class="fa-stack fa-1x ">
+                    <i class="fa fa-circle-o fa-stack-2x "></i>
+                    <i class="fa fa-step-backward fa-stack-1x "></i>
+                </span>
+                <!--暂停和播放-->
+                <span id="play_pause">
+                    <i class="fa fa-play-circle-o fa-3x "></i>
+                    <!--fa-pause-circle-o-->
+                </span>
+                <!--下一首-->
+                <span id="next" class="fa-stack fa-1x ">
+                    <i class="fa fa-circle-o fa-stack-2x "></i>
+                    <i class="fa fa-step-forward fa-stack-1x "></i>
+                </span>
+            </div>
+            <div class="music_play">
+                <div class="icon">
+                    <i class="fa fa-music fa-2x " style="color:#CECECE"></i>
+                    <!--<i class="fa fa-of music fa-stack-1x fa-inverse"></i>-->
+                </div>
+                <!--进度条和歌曲-->
+                <div class="bottom_progress" id="bottom_progress">
+                    <!--歌曲名、歌手-->
+                    <div class="song_message">
+                        <span id="song_name" style="color:white;"></span>
+                        &nbsp;&nbsp;&nbsp;<span id="singer_name" style="color:#CECECE; font-size:0.8em;"></span>
+                    </div>
+                    <!--进度条-->
+                    <div class="progress_wrap" id="progress_wrap">
+                        <progress id="bottom" value="0" max="1000"></progress>
+                    </div>
+                </div>
+                <!--计时-->
+                <div class="dtime" id="dtime">
+                    <span class="current_time">00:00</span> / <span class="duration">00:00</span>
+                </div>
+                <div class="songlist_none" id="song_list">
+                    <ul class="songlist-hd">
+                        <li class="music-hd-name">歌曲</li>
+                        <li class="music-hd-singer">歌手</li>
+                        <li class="music-hd-time">时长</li>
+                    </ul>
+                    <ul class="songlist-item">
+                        <!--歌单里的歌曲信息-->
+                        <!-- <li data-play="songlist_li">
+                            <div class="songlist_songname">$song_name</div>
+                            <div class="songlist_singername">$singer_name</div>
+                            <div class="songlist_songtime">00:00</div>
+                            <div class="song_delete"><i class="fa fa-trash-o"></i></div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <!--显示控制音量/歌单-->
+            <div class="icon_volume" id="icon_volume">
+                <!--显示和控制音量大小-->
+                <div class="volume_none" id="volume">
+                    <div class="w_bar" id="w_bar">
+                        <div class="bar"> </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <span>
+                        <i class="fa fa-volume-up fa-lg"></i>
+                    </span>
+                    <span class="shu">|</span>
+                    <!--显示歌单控制按钮-->
+                    <span>
+                        <i class="fa fa-list fa-lg"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

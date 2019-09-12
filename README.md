@@ -6,21 +6,16 @@
 
 视图：
 ```
-view
-|-user（用户）
-|  |-login.html(登录页面)
-|  |-register.html(注册页面)
-|  |-personal.html(个人中心页面)
-|  |-modify.html(修改个人信息)
+view，具体界面可以参照网易云音乐或其他音乐网站，UI想做成什么样子可以自由发挥
+|-用户（user）
+|  |-登录页面(login.html)
+|  |-注册页面(register.html)
+|  |-个人中心页面(personal.html)
 |-index
-|  |-index.html(主页面)
-|  |-song.html(歌曲页面)
-|  |-rank.html(排行榜页面)
-|  |-search.html(搜索页面)
-|-fragment
-|  |-rank_list.html
-|  |-search_list.html
-|  |-comment_list.html
-……
-layout.html
+|  |-主页面(index.html)，只写我们需要的功能
+|  |-歌曲页面(song.html)，即点击一首歌之后进去的页面
+|  |-排行榜页面(rank.html)
+……以后大家有什么想法可以继续补充
 ```
+
+以及视图所对应的控制器

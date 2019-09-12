@@ -1,0 +1,81 @@
+
+
+<head>
+    <title>{$song.name} - {$song.singer} - {$Think.const.APP_NAME}</title>
+    <!-- Bootstrap -->
+    <!-- <link href="__STATIC__/bootstrap/css/bootstrap-iso.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="__CSS__/song.css" />
+    <link rel="stylesheet" href="__STATIC__/font-awesome/css/font-awesome.min.css" />
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="__JS__/comment.js"></script>
+</head>
+
+<body>
+    <div class="bootstrap-iso">
+        <div class="container theme-showcase" role="main">
+            <div class="setting-out col-md-8 col-md-offset-2">
+                <div class="col-md-3">
+                    <img src="{empty name='song.cover'}__IMG__/cover1.jpg{else/}/song/cover/{$song.cover}{/empty}" alt="..." class="img-circle image">
+                </div>
+                <div class="col-md-8 col-md-6-nature col-md-offset-1">
+                    <div>
+                        <i class="fa fa-tag fa-3x fa-tag-nature" aria-hidden="true"></i>
+                        <h1 class="h1-nature">{$song.name}</h1>
+                    </div>
+                    <br>
+                    <h4>歌手：{$song.singer}</h4>
+                    {notpresent name="album"}
+                        {assign name="album" value="--"}
+                    {/notpresent}
+                    <!-- <h4>所属专辑：{$album}</h4> -->
+                    <button data-play="{$song.id}" type="button" class="btn btn-default navbar-btn" title="播放"><i class="fa fa-play-circle-o fa-lg">&nbsp;&nbsp;</i>播放<button data-add="{$song.id}" type="button" class="btn btn-default navbar-btn" title="添加至播放列表">+</button></button>
+                    <button data-collect="{$song.id}" type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;&nbsp;收藏</button>
+                    <button data-download="{$song.id}" type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-save" aria-hidden="true"></span>&nbsp;下载</button>
+                    <a href="#comment"><button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>&nbsp;评论</button></a>
+                    <div class="lyric">{notempty name="song.lyric"}{$song.lyric}{/notempty}</div>
+                </div>
+            </div>
+        </div>
+        <div class="container theme-showcase" role="main">
+            <div class="setting-out col-md-8 col-md-offset-2" id="comment">
+                <br><br>
+                <section>
+                    <h3>评论</h3>
+                    <div class="my-comment">
+                        <img src="{empty name='$Think.session.user.profile_picture'}__IMG__/profile_picture_def.jpg{else/}__AVATAR__/{$Think.session.user.profile_picture}{/empty}" alt="..." class="img-rounded comment-image">
+                        <form data-pjax class="navbar-form " role="search" action="{:url('index/comment')}" method="post">
+                            <textarea name="content" class="form-control form-control-width" rows="3" placeholder="写下你的评论"></textarea>
+                            <input type="hidden" name="song_id" value="{$song.id}">
+                            <button type="submit" class="btn btn-default btn-default-right">评论</button>
+                        </form>
+                    </div>
+                    <h4>用户评论</h4>
+                    <div class="comment-content">
+                        {include file="fragment/comment_list"}
+                        {$comment_list->render()}
+                    </div>
+                </section>
+                <section>
+                    <div id="light" class="white_content">
+                        <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">点这里关闭本窗口</a>
+                        <form class="navbar-form " role="search">
+                            <textarea class="form-control form-control-width" rows="3" placeholder="输入回复内容"></textarea>
+                        </form>
+                        <button type="submit" class="btn btn-default btn-default-right">发送</button>
+                    </div>
+                    <div id="fade" class="black_overlay"></div>
+                </section>
+            </div>
+        </div>
+        <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+        <!-- <script src="__STATIC__/bootstrap/jquery.min.js"></script> -->
+        <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+        <!-- <script src="__STATIC__/bootstrap/js/bootstrap.min.js"></script> -->
+    </div>
+    {include file="common@public/footer"}
+</body>

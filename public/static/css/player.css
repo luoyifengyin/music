@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+.play {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 60px;
+    z-index: 1000;
+}
+
+.play .container {
+    margin: 0 auto;
+    min-width: 65%;
+    max-width: 980px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play_switch {
+    display: flex;
+    align-items: center;
+}
+
+.play_switch span {
+    vertical-align: middle;
+    color: #CECECE;
+    margin: 0 5px;
+}
+
+.play_switch span:hover {
+    color: #b02dcc;
+}
+
+#play_pause {}
+
+.music_play {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.play .icon {
+    margin-right: 20px;
+}
+
+.play .bottom_progress {
+    height: 80%;
+    flex-grow: 1;
+}
+
+.play .bottom_progress .progress_wrap {
+    cursor: pointer;
+}
+
+.play .bottom_progress progress {
+    width: 100%;
+    height: 6px;
+    font-size: 1em;
+    border-radius: 6px;
+    vertical-align: middle;
+}
+
+/* 表示总长度背景色 */
+
+.play .bottom_progress progress::-webkit-progress-bar {
+    background-color: #CECECE;
+    border-radius: 10px;
+}
+
+/* 表示已完成进度背景色 */
+.play .bottom_progress progress::-webkit-progress-value {
+    background-color: #b02dcc;
+    border-radius: 10px;
+}
+
+.play .song_message {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*时间*/
+.play .dtime {
+    font-size: 0.8em;
+    color: #CECECE;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    align-self: flex-end;
+}
+
+/*音量和列表的容器*/
+.play .icon_volume {
+    position: relative;
+    height: 60px;
+}
+
+.play .icon_volume a {
+    height: inherit;
+    line-height: 60px;
+    vertical-align: middle;
+    text-decoration: none
+}
+
+.play .icon_volume span i {
+    color: #CECECE;
+}
+
+.play .icon_volume span:hover i {
+    color: #b02dcc;
+}
+
+/*音量*/
+.volume_none {
+    display: none;
+}
+
+.volume {
+    position: absolute;
+    left: -5px;
+    height: 120px;
+    width: 25px;
+    bottom: 60px;
+    background-color: black;
+    /*background-color: rgba(0,0,0,0.8);*/
+    border-radius: 5px 5px 0 0;
+}
+
+.volume .w_bar {
+    height: 100px;
+    width: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: #b02dcc;
+    cursor: pointer;
+}
+
+.volume .w_bar .bar {
+    height: 0;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.play .icon_volume .fa-volume-up {
+    cursor: pointer;
+}
+
+.play .icon_volume .fa-list {
+    cursor: pointer;
+}
+
+.play .icon_volume .shu {
+    margin-left: 15px;
+    margin-right: 20px;
+    color: #CECECE;
+    font-size: 2em;
+    margin-top: 50px;
+}
+
+/*歌单列表*/
+
+.songlist {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    height: 200px;
+    background-color: #101010dd;
+    overflow: auto;
+}
+
+.songlist_none {
+    display: none;
+}
+
+.songlist .songlist_top {
+    height: 25px;
+    color: #CECECE;
+    background-color: #101010;
+}
+
+.songlist .songlist-hd {
+    align-items: center;
+    display: flex;
+    background-color: #101010;
+}
+
+.songlist-hd .music-hd-name {
+    padding-left: 2%;
+    min-width: 80px;
+    color: #CECECE;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.songlist-hd .music-hd-singer {
+    width: 25%;
+    color: #CECECE;
+    white-space: nowrap;
+}
+
+.songlist-hd .music-hd-time {
+    width: 11%;
+    color: #CECECE;
+    white-space: nowrap;
+}
+
+.songlist ul {
+    margin: 0px;
+    padding: 5px 15px;
+}
+
+.songlist ul li {
+    list-style-type: none;
+    color: #CECECE;
+    display: flex;
+}
+
+.songlist .songlist-item li:hover {
+    color: #fff;
+    background: #5d5858;
+}
+.songlist .songlist-item li.active{
+    color: #fff;
+    background: #5d5858;
+}
+
+.songlist ul li .songlist_songname {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.songlist ul li .songlist_singername {
+    width: 25%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.songlist ul li .songlist_songtime {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 8%
+}
+
+
+.songlist .song_delete {
+    margin-left: 5px;
+    width: 2%;
+    cursor: pointer;
+}

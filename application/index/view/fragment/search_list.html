@@ -1,0 +1,22 @@
+{present name="search_list"}
+{volist name="search_list" id="item"}
+	<li class="music-item">
+		<div class="music-infor">
+			{php}$song_path = url("index/song/".$item->id);{/php}
+			<a data-pjax href="{$song_path}"><img class="music-infor-img" src="{empty name='item.cover'}__IMG__/cover1.jpg{else/}/song/cover/{$item.cover}{/empty}"></a>
+			<a data-pjax href="{$song_path}"><div class="music-infor-name" title="{$item.name}">{$item.name}</div></a>
+		</div>
+		<div class="music-infor-singer" title="{$item.singer}">{$item.singer}</div>
+		<div class="music_tools" style="display: none;">
+			<ul>
+				<li data-play="{$item.id}"><i class="iconfont icon-play5" style="font-size: 38px;"></i></li>
+				<li data-add="{$item.id}"><i class="iconfont icon-add1" style="font-size: 38px;"></i></li>
+				<li data-collect="{$item.id}"><i class="iconfont icon-fscollection" style="font-size: 38px;"></i></li>
+				<li data-download="{$item.id}"><i class="iconfont icon-Downarrow" style="font-size: 38px;"></i></li>
+			</ul>
+		</div>
+		<div class="music-infor-album">{$item.area}</div>
+		<div class="music-infor-time">{$item.duration}</div>
+	</li>
+{/volist}
+{/present}

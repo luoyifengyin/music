@@ -1,0 +1,191 @@
+html, body, input, ul, li{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #efefef;
+}
+button{
+    cursor: pointer;
+    outline-style: none;
+}
+input{
+    outline-style: none;
+}
+li{
+    list-style: none;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+.wrap{
+    margin-bottom: 20px;
+    min-width: 1000px;
+}
+.search-area
+{
+	position: relative;
+    height: 247px;
+    background-position: 50%;
+    background-size: cover;
+}
+.search-input{
+	width: 554px;
+    height: 50px;
+    border: 0 none;
+    padding: 0 70px 0 15px;
+    line-height: 50px;
+    left: 50%;
+    top: 85px;
+    margin-top: 0;
+    margin-left: -322px;
+    background: #fff;
+    position: relative;
+    border-radius: 3px
+}
+.search-input-bar{
+    width: 554px;
+    height: 50px;
+    border: 0 none;
+    font-size: 14px;
+    background: 0 0;
+}
+.search-input-btn{
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0 none;
+    overflow: visible;
+    background: 0 0;
+}
+.search-input-btn:hover{
+    color: #c755ff;
+}
+.icon-txt{
+    font: 0/0 a;
+}
+.search-result{
+    margin: 0 150px;
+}
+.search-list{
+    border: 0px solid #000;
+    position: relative;
+    background-color: #fff;
+}
+.list-tools{
+    border: 0px solid red;
+    padding: 20px 0
+}
+.list-tools button{
+    border: 0px solid #c9c9c9;
+    background-color: white;
+}
+.tools-btn{
+    min-width: 122px;
+    text-align: center;
+    height: 36px;
+    margin-right: 10px; 
+}
+.tools-btn:nth-child(1){
+    background-color: #c755ff;
+    color: white;
+}
+.tools-btn:nth-child(1):hover{
+    background-color: #a338d8;
+     cursor:pointer;
+}
+.tools-btn:nth-child(n+2):hover{
+    background-color: #ededed;
+    cursor: pointer;
+}
+.list-tb{
+    line-height: 46px;
+    background: #fafafa;
+}
+.list-hd{
+    align-items: center;
+    display: flex;
+}
+.list-hd .music-hd-name{
+    padding-left: 5%;
+    min-width: 80px;
+    flex: 1;
+}
+.list-hd .music-hd-singer{
+    width: 25%; 
+}
+.list-hd .music-hd-album{
+    width: 20%;
+}
+.list-hd .music-hd-time{
+    width: 9%;
+}
+.music-item{
+    display: flex;
+    border: 0px solid #FF7000;
+    height: 70px;
+    line-height: 70px;
+}
+.music-item:nth-child(2n){
+    background: #fafafa;
+}
+.music-infor{
+    border: 0px solid red;
+    flex: 1;
+    display: flex;
+}
+.music-infor-img{
+    padding-left: 20px;
+    padding-top: 8px;
+    height: 55px;
+    width: 55px;
+}
+.music-infor-name{
+    padding-left: 20px;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.music-infor-singer{
+    border: 0px solid red;
+    width: 25%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.music_tools{
+    left: 68.5%;
+    position: absolute;
+}
+.music_tools ul{
+    align-items: center;
+    display: flex;
+}
+.music_tools ul li{
+    list-style: none;
+    cursor:pointer;
+}
+.music_tools ul li:hover{
+    color: #c755ff;
+}
+.music-infor-album{
+    border: 0px solid red;
+    width: 18%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.music-infor-time{
+    border: 0px solid red;
+    width: 9%;
+    padding-left: 2%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

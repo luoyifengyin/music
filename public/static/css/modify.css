@@ -1,0 +1,162 @@
+@charset "utf-8";
+html,body{
+	margin:0px;
+	padding:0px;
+}
+div{
+	display:block;
+}
+.bd{
+	height:100%;
+	background-color:#ddd;
+	border-bottom:2px solid #d3d3d3;
+}
+.modify{
+	width:980px;
+	height:100%;
+	margin:0px auto;
+	background-color:#fff;
+	border:2px solid #d3d3d3;
+	border-top:0px;
+}
+.wrap{
+	padding:40px;
+	box-sizing: border-box;
+}
+.title{
+	height:40px;
+	font-size:24px; 
+	font-weight:bold;
+}
+.content{
+	height:500px;
+	margin-top:30px;
+}
+.left{
+	float:left;
+	width:500px;
+	height:100%;
+	margin-right:30px;
+}
+.left_content{
+	position:relative;
+	min-height:38px;
+	margin-bottom:5px;
+	padding-left:38px;
+}
+.label1{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:50px;
+	line-height:32px;
+	text-align:left;
+	font-size:16px;
+	margin-left:10px;
+}
+.label2{
+	width: 72px;
+}
+.input1{
+	width:200px;
+	height:32px;
+	margin-left:20px;
+	padding:5px;
+	line-height:19px;
+	outline:none;
+	border-radius: 4px;
+	border-width: 1px;
+	border: 1px solid #bfcbd9;
+}
+.introduce{
+	position:relative;
+	padding-right:14px;
+}
+.txt{
+	height:122px;
+	width:292px;
+	margin-left:20px;
+	padding:5px 6px 6px;
+	line-height:19px;
+	resize:none;
+	border-radius: 4px;
+	border: 1px solid #bfcbd9;
+}
+.introduce_number{
+	position:absolute;
+	bottom:5px;
+	right:160px;
+	color:#d0d0d0;
+	overflow:auto;
+}
+.check{
+	float:left;
+	margin:6px 0px 0px 20px;
+}
+.birth{
+	float:left;
+	margin:3px 0px 0px 20px;
+}
+.savebtn{
+	position:relative;
+	top:50px;
+	height:64px;
+	margin-top:40px;
+	padding-left:30px;
+}
+.savebtn button{
+	background-color:#5FD259;
+	height:40px;
+	width:125px;
+	font-size:16px;
+	color:#fff;
+	text-align:center;
+	border-radius:8px;
+	border:0px;
+	cursor:pointer;
+}
+.savebtn button:hover{
+	background:#cccccc;
+    border-color:#78C3F3;
+    color:#004974;
+}
+.right{
+	position: relative;
+	float:left;
+	width:250px;
+	height:250px;
+}
+.right_img{
+	width:400px;
+	margin-top:40px;
+}
+#temp{
+	width:200px;
+	height:200px;
+}
+.input2{
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.input2 input {
+    position: absolute;
+    font-size: 100px;
+    right:0;
+    top:0px;
+    opacity:0;
+}
+.input2:hover {
+    background:#AADFFD;
+    border-color:#78C3F3;
+    color:#004974;
+}

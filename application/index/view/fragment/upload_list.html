@@ -1,0 +1,24 @@
+{volist name="upload_list" id="item"}
+<tr>
+    <td style="text-align: center;">{$i}</td>
+    <td><a data-play="{$item.id}" class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-play-circle" aria-hidden="true" title="播放"></span>
+        </a></td>
+    <td>{$item.name}</td>
+    <td>{$item.singer}</td>
+    <td><a data-add="{$item.id}" class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true" title="添加到播放列表"></span>
+        </a>
+        <a data-collect="{$item.id}" class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true" title="收藏"></span>
+        </a>
+        <!-- <a class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-share" aria-hidden="true" title="分享"></span>
+        </a> -->
+        <a data-download="{$item.id}" class="navbar-brand" href="javascript:;">
+            <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true" title="下载"></span>
+        </a>
+    </td>
+    <td>{$item.upload_time}</td>
+</tr>
+{/volist}

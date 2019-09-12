@@ -1,0 +1,12 @@
+{volist name="comment_list" id="item"}
+<div class="user-comment">
+    <img src="{empty name='item.profile_picture'}__IMG__/profile_picture_def.jpg{else/}__AVATAR__/{$item.profile_picture}{/empty}" class="img-rounded comment-image">
+    <div class="cnt">
+        <a href="javascript:;">{$item.username}</a>: {$item.content}
+    </div>
+    <div class="cnt">
+        {$item.publish_time}
+        <a class="reply" href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">回复</a></p>
+    </div>
+</div>
+{/volist}

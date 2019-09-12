@@ -1,0 +1,84 @@
+@charset "utf-8"; /* 标签选择器 */
+
+.table tbody tr td {
+    vertical-align: middle !important;
+}
+
+
+.html {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    width: 1000px;
+    margin:auto;
+    margin-bottom: 20px;
+    padding: 0 40px;
+}
+
+.my-item{
+    margin-bottom: 50px;
+}
+
+.my-item dt img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    padding: 3px;
+    float:right;
+    background: white;
+    border: 1px solid #d5d5d5;
+}
+
+.my-item .name {
+    padding-bottom:20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.my-item .data {
+    height:61px;
+    margin-bottom: 20px;
+}
+
+.my-item .data li {
+    float: left;
+    padding: 0 40px 0 20px;
+    border-left: 1px solid #ddd;
+}
+
+.my-item .data strong {
+    display: block;
+    margin-top: -4px;
+    font-size: 32px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+ul{list-style-type: none;}
+
+.u-title-1{
+    height: 40px;
+    border-bottom: 2px solid #c20c0c;
+}
+.u-title {
+}
+.row{
+    padding-top:30px;
+
+}
+.thumbnail{
+    width:200px;
+    height:200px;
+    margin-left: auto;
+    margin-right:auto;
+
+}
+
+.btn-group {
+    top:50%;
+    left:35%;
+
+}
