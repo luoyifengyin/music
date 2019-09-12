@@ -12,11 +12,13 @@ view
 |  |-register.html(注册页面)
 |  |-personal.html(个人中心页面)
 |  |-modify.html(修改个人信息)
+|  |-upload.html(上传音乐页面)
 |-index
 |  |-index.html(主页面)
 |  |-song.html(歌曲页面)
 |  |-rank.html(排行榜页面)
 |  |-search.html(搜索页面)
+|  |-my_music.html(我的音乐页面)
 |-fragment
 |  |-rank_list.html
 |  |-search_list.html
